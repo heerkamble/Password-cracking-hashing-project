@@ -4,7 +4,7 @@ A cybersecurity internship project exploring how passwords are stored, why naive
 breakable, and how brute-force / dictionary attacks actually work in practice — implemented
 from scratch in Python, plus hands-on usage of industry-standard tools (Hashcat, John the Ripper).
 
-## ⚠️ Ethical Use Notice
+##  Ethical Use Notice
 
 Everything in this repository operates **only on hashes you generate yourself** for learning
 purposes. Do not run any of these tools or techniques against accounts, systems, or hash dumps
