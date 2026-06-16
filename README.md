@@ -71,6 +71,9 @@ built-in `hashlib` (PBKDF2) if bcrypt isn't installed, so the demos work with ze
 
 ```bash
 python3 src/hash_demo.py
+
+<img width="1917" height="933" alt="Screenshot 2026-06-17 010340" src="https://github.com/user-attachments/assets/7186bb87-6d43-48ed-85fb-e9a3209e5ddd" />
+
 ```
 
 Hashes the same password with MD5, SHA-1, SHA-256, SHA-512, PBKDF2-SHA256, and bcrypt (if
@@ -82,6 +85,9 @@ attacker try billions of guesses per second on a GPU, while bcrypt is deliberate
 
 ```bash
 python3 src/salting_demo.py
+
+<img width="1918" height="938" alt="Screenshot 2026-06-17 010450" src="https://github.com/user-attachments/assets/f681eb5f-cebe-48f5-9811-1633e271d0d2" />
+
 ```
 
 Shows two users with the same password producing the *same* hash when unsalted, and different
@@ -93,9 +99,15 @@ hashes once a random salt is added — defeating precomputed rainbow tables.
 # Demo mode: generates a random short password, hashes it, then cracks its own hash
 python3 src/brute_force_cracker.py --demo --max-length 4
 
+<img width="1918" height="1005" alt="Screenshot 2026-06-17 010608" src="https://github.com/user-attachments/assets/839b12fd-d568-4e0f-9978-3042f5dbe00d" />
+<img width="1918" height="1000" alt="Screenshot 2026-06-17 010622" src="https://github.com/user-attachments/assets/5c4d47e0-ed53-4ec3-9dd6-1818e5eb4e72" />
+<img width="1915" height="1012" alt="Screenshot 2026-06-17 010644" src="https://github.com/user-attachments/assets/1ca52eb0-2fc6-4831-98e8-adeced9c9a72" />
+
 # Crack a specific hash you provide
 python3 src/brute_force_cracker.py --hash 5f4dcc3b5aa765d61d8327deb882cf99 \
     --algo md5 --charset abcdefghijklmnopqrstuvwxyz0123456789 --max-length 5
+
+
 ```
 
 ### 4. Custom dictionary attack
@@ -107,6 +119,8 @@ python3 src/dictionary_attack.py --demo --wordlist wordlists/sample_wordlist.txt
 # Against a specific hash, with simple mutation rules (capitalization, appended digits/symbols)
 python3 src/dictionary_attack.py --hash <hash> --algo sha256 \
     --wordlist wordlists/sample_wordlist.txt --mutations
+<img width="1907" height="323" alt="Screenshot 2026-06-17 010915" src="https://github.com/user-attachments/assets/40ef9f11-34fb-4743-a357-9370b7a9568f" />
+
 ```
 
 ### 5. Hashcat / John the Ripper
